@@ -1,0 +1,246 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+
+  <meta name="theme-color" content="#ff8fb3">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Leyla 🐱</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="game-container">
+
+    <!-- Header -->
+    <header class="header">
+
+      <div class="logo">
+        <span>🐾</span>
+        <h1>Leyla</h1>
+      </div>
+
+      <p id="status-text">
+        Leyla is looking at you...
+      </p>
+
+    </header>
+
+
+    <!-- Stats -->
+    <section class="stats">
+
+      <div class="stat-card">
+        <span class="stat-icon">🍗</span>
+
+        <div class="stat-info">
+          <span>Hunger</span>
+
+          <div class="progress">
+            <div
+              id="hunger-bar"
+              class="progress-fill hunger"
+            ></div>
+          </div>
+        </div>
+
+        <strong id="hunger-value">80</strong>
+      </div>
+
+
+      <div class="stat-card">
+        <span class="stat-icon">💧</span>
+
+        <div class="stat-info">
+          <span>Thirst</span>
+
+          <div class="progress">
+            <div
+              id="thirst-bar"
+              class="progress-fill thirst"
+            ></div>
+          </div>
+        </div>
+
+        <strong id="thirst-value">80</strong>
+      </div>
+
+
+      <div class="stat-card">
+        <span class="stat-icon">❤️</span>
+
+        <div class="stat-info">
+          <span>Happy</span>
+
+          <div class="progress">
+            <div
+              id="happiness-bar"
+              class="progress-fill happiness"
+            ></div>
+          </div>
+        </div>
+
+        <strong id="happiness-value">80</strong>
+      </div>
+
+
+      <div class="stat-card">
+        <span class="stat-icon">⚡</span>
+
+        <div class="stat-info">
+          <span>Energy</span>
+
+          <div class="progress">
+            <div
+              id="energy-bar"
+              class="progress-fill energy"
+            ></div>
+          </div>
+        </div>
+
+        <strong id="energy-value">80</strong>
+      </div>
+
+    </section>
+
+
+    <!-- Leyla -->
+    <section class="cat-stage">
+
+      <div id="particles-container"></div>
+
+      <div class="cat-shadow"></div>
+
+      <img
+        id="cat-img"
+        src="images/leyla_normal.png"
+        alt="Leyla the cat"
+        draggable="false"
+      >
+
+      <div
+        id="action-bubble"
+        class="action-bubble"
+        aria-hidden="true"
+      >
+        🐱
+      </div>
+
+    </section>
+
+
+    <!-- Actions -->
+    <section class="actions-grid">
+
+      <button
+        class="action-btn"
+        data-action="feed"
+        type="button"
+      >
+        <span class="icon">🍗</span>
+        <span>Feed</span>
+      </button>
+
+
+      <button
+        class="action-btn"
+        data-action="water"
+        type="button"
+      >
+        <span class="icon">💧</span>
+        <span>Water</span>
+      </button>
+
+
+      <button
+        class="action-btn"
+        data-action="play"
+        type="button"
+      >
+        <span class="icon">🧶</span>
+        <span>Play</span>
+      </button>
+
+
+      <button
+        class="action-btn"
+        data-action="pet"
+        type="button"
+      >
+        <span class="icon">❤️</span>
+        <span>Pet</span>
+      </button>
+
+
+      <button
+        class="action-btn"
+        data-action="treat"
+        type="button"
+      >
+        <span class="icon">🦴</span>
+        <span>Treat</span>
+      </button>
+
+
+      <button
+        class="action-btn"
+        data-action="sleep"
+        type="button"
+      >
+        <span class="icon">😴</span>
+        <span>Sleep</span>
+      </button>
+
+
+      <button
+        class="action-btn danger"
+        data-action="scare"
+        type="button"
+      >
+        <span class="icon">🥒</span>
+        <span>Scare</span>
+      </button>
+
+
+      <button
+        class="action-btn danger"
+        data-action="poke"
+        type="button"
+      >
+        <span class="icon">👉</span>
+        <span>Poke</span>
+      </button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+      <button
+        id="reset-btn"
+        class="reset-btn"
+        type="button"
+      >
+        ↻ Reset Leyla
+      </button>
+
+    </footer>
+
+  </main>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
+```
