@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,228 +18,371 @@
 
 <body>
 
-  <main class="game-container">
+  <main class="app">
 
-    <!-- Header -->
-    <header class="header">
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <header class="top-bar">
 
       <div class="logo">
         <span>🐾</span>
-        <h1>Leyla</h1>
+        <span>Leyla</span>
       </div>
 
-      <p id="status-text">
-        Leyla is looking at you...
-      </p>
+      <div class="coins">
+        🪙 <span id="coins-value">100</span>
+      </div>
 
     </header>
 
 
-    <!-- Stats -->
-    <section class="stats">
+    <!-- =========================
+         HOME SCREEN
+    ========================== -->
 
-      <div class="stat-card">
-        <span class="stat-icon">🍗</span>
+    <section
+      id="home-screen"
+      class="screen active"
+    >
 
-        <div class="stat-info">
-          <span>Hunger</span>
+      <div class="status-area">
 
-          <div class="progress">
-            <div
-              id="hunger-bar"
-              class="progress-fill hunger"
-            ></div>
-          </div>
+        <div class="mood-pill">
+          <span id="mood-icon">😺</span>
+          <span id="mood-text">Happy</span>
         </div>
 
-        <strong id="hunger-value">80</strong>
+        <p id="status-text">
+          Leyla is looking at you...
+        </p>
+
       </div>
 
 
-      <div class="stat-card">
-        <span class="stat-icon">💧</span>
+      <!-- Stats -->
 
-        <div class="stat-info">
-          <span>Thirst</span>
+      <div class="stats">
 
-          <div class="progress">
-            <div
-              id="thirst-bar"
-              class="progress-fill thirst"
-            ></div>
+        <div class="stat-card">
+          <span>🍗</span>
+
+          <div>
+            <small>Hunger</small>
+
+            <div class="progress">
+              <div
+                id="hunger-bar"
+                class="progress-fill hunger"
+              ></div>
+            </div>
           </div>
+
+          <strong id="hunger-value">80</strong>
         </div>
 
-        <strong id="thirst-value">80</strong>
+
+        <div class="stat-card">
+          <span>💧</span>
+
+          <div>
+            <small>Thirst</small>
+
+            <div class="progress">
+              <div
+                id="thirst-bar"
+                class="progress-fill thirst"
+              ></div>
+            </div>
+          </div>
+
+          <strong id="thirst-value">80</strong>
+        </div>
+
+
+        <div class="stat-card">
+          <span>❤️</span>
+
+          <div>
+            <small>Happy</small>
+
+            <div class="progress">
+              <div
+                id="happiness-bar"
+                class="progress-fill happiness"
+              ></div>
+            </div>
+          </div>
+
+          <strong id="happiness-value">80</strong>
+        </div>
+
+
+        <div class="stat-card">
+          <span>⚡</span>
+
+          <div>
+            <small>Energy</small>
+
+            <div class="progress">
+              <div
+                id="energy-bar"
+                class="progress-fill energy"
+              ></div>
+            </div>
+          </div>
+
+          <strong id="energy-value">80</strong>
+        </div>
+
       </div>
 
 
-      <div class="stat-card">
-        <span class="stat-icon">❤️</span>
-
-        <div class="stat-info">
-          <span>Happy</span>
-
-          <div class="progress">
-            <div
-              id="happiness-bar"
-              class="progress-fill happiness"
-            ></div>
-          </div>
-        </div>
-
-        <strong id="happiness-value">80</strong>
-      </div>
-
-
-      <div class="stat-card">
-        <span class="stat-icon">⚡</span>
-
-        <div class="stat-info">
-          <span>Energy</span>
-
-          <div class="progress">
-            <div
-              id="energy-bar"
-              class="progress-fill energy"
-            ></div>
-          </div>
-        </div>
-
-        <strong id="energy-value">80</strong>
-      </div>
-
-    </section>
-
-
-    <!-- Leyla -->
-    <section class="cat-stage">
-
-      <div id="particles-container"></div>
-
-      <div class="cat-shadow"></div>
-
-      <img
-        id="cat-img"
-        src="images/leyla_normal.png"
-        alt="Leyla the cat"
-        draggable="false"
-      >
+      <!-- Leyla -->
 
       <div
-        id="action-bubble"
-        class="action-bubble"
-        aria-hidden="true"
+        id="cat-stage"
+        class="cat-stage"
       >
-        🐱
+
+        <div id="particles-container"></div>
+
+        <div class="cat-glow"></div>
+
+        <div class="cat-shadow"></div>
+
+        <div
+          id="cat-wrapper"
+          class="cat-wrapper"
+        >
+
+          <img
+            id="cat-img"
+            src="images/leyla_normal.png"
+            alt="Leyla"
+            draggable="false"
+          >
+
+        </div>
+
+        <div
+          id="action-bubble"
+          class="action-bubble"
+        >
+          🐱
+        </div>
+
+        <div
+          id="touch-hint"
+          class="touch-hint"
+        >
+          Drag Leyla 👆
+        </div>
+
+      </div>
+
+
+      <!-- Actions -->
+
+      <div class="actions-grid">
+
+        <button
+          class="action-btn"
+          data-action="feed"
+        >
+          <span>🍗</span>
+          <small>Feed</small>
+        </button>
+
+        <button
+          class="action-btn"
+          data-action="water"
+        >
+          <span>💧</span>
+          <small>Water</small>
+        </button>
+
+        <button
+          class="action-btn"
+          data-action="pet"
+        >
+          <span>❤️</span>
+          <small>Pet</small>
+        </button>
+
+        <button
+          class="action-btn"
+          data-action="treat"
+        >
+          <span>🦴</span>
+          <small>Treat</small>
+        </button>
+
+        <button
+          class="action-btn"
+          data-action="play"
+        >
+          <span>🧶</span>
+          <small>Play</small>
+        </button>
+
+        <button
+          class="action-btn"
+          data-action="sleep"
+        >
+          <span>😴</span>
+          <small>Sleep</small>
+        </button>
+
+        <button
+          class="action-btn danger"
+          data-action="scare"
+        >
+          <span>🥒</span>
+          <small>Scare</small>
+        </button>
+
+        <button
+          class="action-btn danger"
+          data-action="poke"
+        >
+          <span>👉</span>
+          <small>Poke</small>
+        </button>
+
       </div>
 
     </section>
 
 
-    <!-- Actions -->
-    <section class="actions-grid">
+    <!-- =========================
+         GAMES SCREEN
+    ========================== -->
+
+    <section
+      id="games-screen"
+      class="screen"
+    >
+
+      <div class="page-title">
+        <h2>🎮 Play with Leyla</h2>
+        <p>Choose a game</p>
+      </div>
+
 
       <button
-        class="action-btn"
-        data-action="feed"
-        type="button"
+        class="game-card"
+        data-game="yarn"
       >
-        <span class="icon">🍗</span>
-        <span>Feed</span>
+
+        <div class="game-card-icon">
+          🧶
+        </div>
+
+        <div class="game-card-content">
+          <h3>Catch the Yarn</h3>
+          <p>Move the yarn and let Leyla catch it!</p>
+        </div>
+
+        <span class="game-arrow">›</span>
+
       </button>
 
 
       <button
-        class="action-btn"
-        data-action="water"
-        type="button"
+        class="game-card"
+        data-game="fish"
       >
-        <span class="icon">💧</span>
-        <span>Water</span>
+
+        <div class="game-card-icon">
+          🐟
+        </div>
+
+        <div class="game-card-content">
+          <h3>Catch the Fish</h3>
+          <p>Tap the fish before they disappear!</p>
+        </div>
+
+        <span class="game-arrow">›</span>
+
       </button>
 
 
-      <button
-        class="action-btn"
-        data-action="play"
-        type="button"
-      >
-        <span class="icon">🧶</span>
-        <span>Play</span>
-      </button>
-
-
-      <button
-        class="action-btn"
-        data-action="pet"
-        type="button"
-      >
-        <span class="icon">❤️</span>
-        <span>Pet</span>
-      </button>
-
-
-      <button
-        class="action-btn"
-        data-action="treat"
-        type="button"
-      >
-        <span class="icon">🦴</span>
-        <span>Treat</span>
-      </button>
-
-
-      <button
-        class="action-btn"
-        data-action="sleep"
-        type="button"
-      >
-        <span class="icon">😴</span>
-        <span>Sleep</span>
-      </button>
-
-
-      <button
-        class="action-btn danger"
-        data-action="scare"
-        type="button"
-      >
-        <span class="icon">🥒</span>
-        <span>Scare</span>
-      </button>
-
-
-      <button
-        class="action-btn danger"
-        data-action="poke"
-        type="button"
-      >
-        <span class="icon">👉</span>
-        <span>Poke</span>
-      </button>
+      <div class="game-tip">
+        🎁 Playing games gives Leyla Coins!
+      </div>
 
     </section>
 
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- =========================
+         GAME SCREEN
+    ========================== -->
+
+    <section
+      id="game-screen"
+      class="screen"
+    >
+
+      <div class="game-header">
+
+        <button
+          id="back-game-btn"
+          class="back-btn"
+        >
+          ‹ Back
+        </button>
+
+        <h2 id="game-title">
+          Game
+        </h2>
+
+        <div id="game-score">
+          0
+        </div>
+
+      </div>
+
+
+      <div
+        id="game-area"
+        class="game-area"
+      ></div>
+
+    </section>
+
+
+    <!-- =========================
+         BOTTOM NAV
+    ========================== -->
+
+    <nav class="bottom-nav">
 
       <button
-        id="reset-btn"
-        class="reset-btn"
-        type="button"
+        class="nav-btn active"
+        data-screen="home-screen"
       >
-        ↻ Reset Leyla
+        <span>🏠</span>
+        <small>Home</small>
       </button>
 
-    </footer>
+      <button
+        class="nav-btn"
+        data-screen="games-screen"
+      >
+        <span>🎮</span>
+        <small>Games</small>
+      </button>
+
+    </nav>
 
   </main>
 
 
+  <script src="games/yarn.js"></script>
+  <script src="games/fish.js"></script>
   <script src="app.js"></script>
 
 </body>
 </html>
-```
