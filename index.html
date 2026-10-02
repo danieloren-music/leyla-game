@@ -8,10 +8,9 @@
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
   >
 
-  <meta name="theme-color" content="#ff8fb3">
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#f7c9dc">
 
-  <title>Leyla 🐱</title>
+  <title>Leyla 🐾</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,15 +19,12 @@
 
   <main class="app">
 
-    <!-- =========================
-         TOP BAR
-    ========================== -->
-
+    <!-- TOP BAR -->
     <header class="top-bar">
 
       <div class="logo">
         <span>🐾</span>
-        <span>Leyla</span>
+        <strong>Leyla</strong>
       </div>
 
       <div class="coins">
@@ -38,15 +34,13 @@
     </header>
 
 
-    <!-- =========================
-         HOME SCREEN
-    ========================== -->
-
+    <!-- HOME -->
     <section
       id="home-screen"
       class="screen active"
     >
 
+      <!-- Mood -->
       <div class="status-area">
 
         <div class="mood-pill">
@@ -62,13 +56,12 @@
 
 
       <!-- Stats -->
-
       <div class="stats">
 
         <div class="stat-card">
           <span>🍗</span>
 
-          <div>
+          <div class="stat-content">
             <small>Hunger</small>
 
             <div class="progress">
@@ -86,7 +79,7 @@
         <div class="stat-card">
           <span>💧</span>
 
-          <div>
+          <div class="stat-content">
             <small>Thirst</small>
 
             <div class="progress">
@@ -104,7 +97,7 @@
         <div class="stat-card">
           <span>❤️</span>
 
-          <div>
+          <div class="stat-content">
             <small>Happy</small>
 
             <div class="progress">
@@ -122,7 +115,7 @@
         <div class="stat-card">
           <span>⚡</span>
 
-          <div>
+          <div class="stat-content">
             <small>Energy</small>
 
             <div class="progress">
@@ -139,52 +132,120 @@
       </div>
 
 
-      <!-- Leyla -->
-
+      <!-- ROOM -->
       <div
-        id="cat-stage"
-        class="cat-stage"
+        id="room"
+        class="room"
       >
 
-        <div id="particles-container"></div>
+        <!-- Window -->
+        <div class="window">
+          <div class="window-sky"></div>
+          <div class="window-frame vertical"></div>
+          <div class="window-frame horizontal"></div>
+        </div>
 
-        <div class="cat-glow"></div>
 
-        <div class="cat-shadow"></div>
+        <!-- Wall decoration -->
+        <div class="wall-picture">
+          🖼️
+        </div>
 
+
+        <!-- Cat tower -->
+        <div
+          class="room-object cat-tower"
+          data-object="tower"
+        >
+          🪵
+        </div>
+
+
+        <!-- Yarn -->
+        <button
+          class="room-object toy-object"
+          data-object="toy"
+          aria-label="Yarn toy"
+        >
+          🧶
+        </button>
+
+
+        <!-- Food -->
+        <button
+          class="room-object food-object"
+          data-object="food"
+          aria-label="Food bowl"
+        >
+          🍗
+        </button>
+
+
+        <!-- Water -->
+        <button
+          class="room-object water-object"
+          data-object="water"
+          aria-label="Water bowl"
+        >
+          💧
+        </button>
+
+
+        <!-- Bed -->
+        <button
+          class="room-object bed-object"
+          data-object="bed"
+          aria-label="Bed"
+        >
+          🛏️
+        </button>
+
+
+        <!-- Floor rug -->
+        <div class="rug"></div>
+
+
+        <!-- Leyla -->
         <div
           id="cat-wrapper"
           class="cat-wrapper"
         >
 
-          <img
-            id="cat-img"
-            src="images/leyla_normal.png"
-            alt="Leyla"
-            draggable="false"
-          >
+          <div class="cat-3d">
+
+            <div class="cat-depth"></div>
+
+            <img
+              id="cat-img"
+              src="images/leyla_normal.png"
+              alt="Leyla"
+              draggable="false"
+            >
+
+          </div>
 
         </div>
 
+
+        <!-- Interaction bubble -->
         <div
           id="action-bubble"
           class="action-bubble"
         >
-          🐱
+          🐾
         </div>
 
+
+        <!-- Particles -->
         <div
-          id="touch-hint"
-          class="touch-hint"
-        >
-          Drag Leyla 👆
-        </div>
+          id="particles-container"
+          class="particles-container"
+        ></div>
 
       </div>
 
 
       <!-- Actions -->
-
       <div class="actions-grid">
 
         <button
@@ -256,10 +317,7 @@
     </section>
 
 
-    <!-- =========================
-         GAMES SCREEN
-    ========================== -->
-
+    <!-- GAMES -->
     <section
       id="games-screen"
       class="screen"
@@ -308,18 +366,10 @@
 
       </button>
 
-
-      <div class="game-tip">
-        🎁 Playing games gives Leyla Coins!
-      </div>
-
     </section>
 
 
-    <!-- =========================
-         GAME SCREEN
-    ========================== -->
-
+    <!-- GAME SCREEN -->
     <section
       id="game-screen"
       class="screen"
@@ -344,7 +394,6 @@
 
       </div>
 
-
       <div
         id="game-area"
         class="game-area"
@@ -353,10 +402,7 @@
     </section>
 
 
-    <!-- =========================
-         BOTTOM NAV
-    ========================== -->
-
+    <!-- NAVIGATION -->
     <nav class="bottom-nav">
 
       <button
@@ -382,6 +428,7 @@
 
   <script src="games/yarn.js"></script>
   <script src="games/fish.js"></script>
+  <script src="room/room.js"></script>
   <script src="app.js"></script>
 
 </body>
